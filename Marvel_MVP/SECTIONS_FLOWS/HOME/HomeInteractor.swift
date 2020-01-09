@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LoginInteractor : GenericProvider  {
+class HomeInteractor : GenericProvider  {
             
     internal func getAllComicsFromGenericProvider(_ completion : @escaping ([ResultComics]) -> ()) {
         getListComicsFromMarvel(CONSTANTS.CALLSTOMARVEL.BASE_URL_COMICS,

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LoginPresenter : LoginInteractor, ObservableObject  {
+class HomePresenter : HomeInteractor, ObservableObject  {
     
     @Published var comics : [ResultComics] = []
     @Published var characters : [ResultCharacters] = []

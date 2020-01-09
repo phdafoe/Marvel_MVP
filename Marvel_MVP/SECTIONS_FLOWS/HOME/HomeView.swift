@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-struct LoginView: View {
+struct HomeView: View {
     
     //MARK: - Variables locales
-    @ObservedObject var presenter = LoginPresenter()
+    @ObservedObject var presenter = HomePresenter()
     
     //MARK: - Inicializador de la vista
     init() {

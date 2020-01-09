@@ -13,12 +13,12 @@
 		B4B0EBF123C639BC0057D230 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B0EBF023C639BC0057D230 /* Assets.xcassets */; };
 		B4B0EBF423C639BC0057D230 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B0EBF323C639BC0057D230 /* Preview Assets.xcassets */; };
 		B4B0EBF723C639BC0057D230 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B0EBF523C639BC0057D230 /* LaunchScreen.storyboard */; };
-		B4B0EC0023C639F80057D230 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EBFF23C639F80057D230 /* LoginView.swift */; };
+		B4B0EC0023C639F80057D230 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EBFF23C639F80057D230 /* HomeView.swift */; };
 		B4B0EC0323C63AC10057D230 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC0223C63AC10057D230 /* AppAssembly.swift */; };
-		B4B0EC0523C63B460057D230 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC0423C63B460057D230 /* LoginPresenter.swift */; };
+		B4B0EC0523C63B460057D230 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC0423C63B460057D230 /* HomePresenter.swift */; };
 		B4B0EC0823C63B680057D230 /* BaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC0623C63B680057D230 /* BaseProvider.swift */; };
 		B4B0EC0923C63B680057D230 /* GenerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC0723C63B680057D230 /* GenerProvider.swift */; };
-		B4B0EC0B23C63B930057D230 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC0A23C63B930057D230 /* LoginInteractor.swift */; };
+		B4B0EC0B23C63B930057D230 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC0A23C63B930057D230 /* HomeInteractor.swift */; };
 		B4B0EC0E23C63C640057D230 /* ComicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC0D23C63C640057D230 /* ComicsModel.swift */; };
 		B4B0EC1123C63CB10057D230 /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC1023C63CB10057D230 /* Constantes.swift */; };
 		B4B0EC1323C63E2F0057D230 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC1223C63E2F0057D230 /* Helpers.swift */; };
@@ -27,6 +27,15 @@
 		B4B0EC1A23C66FE50057D230 /* HeaderCellComics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC1923C66FE50057D230 /* HeaderCellComics.swift */; };
 		B4B0EC1C23C73A190057D230 /* CharactersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC1B23C73A190057D230 /* CharactersModel.swift */; };
 		B4B0EC1E23C78B6B0057D230 /* SeriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC1D23C78B6B0057D230 /* SeriesModel.swift */; };
+		B4B0EC2223C791980057D230 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC2123C791980057D230 /* LoginView.swift */; };
+		B4B0EC2523C799460057D230 /* SignInWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC2423C799460057D230 /* SignInWithApple.swift */; };
+		B4B0EC2723C7A3C30057D230 /* UserAndPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC2623C7A3C30057D230 /* UserAndPassword.swift */; };
+		B4B0EC2D23C7A71D0057D230 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC2923C7A71C0057D230 /* UserData.swift */; };
+		B4B0EC2E23C7A71D0057D230 /* UserDataKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC2A23C7A71C0057D230 /* UserDataKeychain.swift */; };
+		B4B0EC2F23C7A71D0057D230 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC2B23C7A71C0057D230 /* Keychain.swift */; };
+		B4B0EC3023C7A71D0057D230 /* SharedWebCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC2C23C7A71C0057D230 /* SharedWebCredential.swift */; };
+		B4B0EC3223C7A8B10057D230 /* SignInWithAppleDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC3123C7A8B10057D230 /* SignInWithAppleDelegates.swift */; };
+		B4B0EC3423C7AA200057D230 /* WebApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC3323C7AA200057D230 /* WebApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,12 +48,12 @@
 		B4B0EBF323C639BC0057D230 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B4B0EBF623C639BC0057D230 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4B0EBF823C639BC0057D230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B4B0EBFF23C639F80057D230 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B4B0EBFF23C639F80057D230 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B4B0EC0223C63AC10057D230 /* AppAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
-		B4B0EC0423C63B460057D230 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		B4B0EC0423C63B460057D230 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		B4B0EC0623C63B680057D230 /* BaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseProvider.swift; sourceTree = "<group>"; };
 		B4B0EC0723C63B680057D230 /* GenerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerProvider.swift; sourceTree = "<group>"; };
-		B4B0EC0A23C63B930057D230 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		B4B0EC0A23C63B930057D230 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		B4B0EC0D23C63C640057D230 /* ComicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsModel.swift; sourceTree = "<group>"; };
 		B4B0EC1023C63CB10057D230 /* Constantes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
 		B4B0EC1223C63E2F0057D230 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
@@ -53,6 +62,16 @@
 		B4B0EC1923C66FE50057D230 /* HeaderCellComics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCellComics.swift; sourceTree = "<group>"; };
 		B4B0EC1B23C73A190057D230 /* CharactersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersModel.swift; sourceTree = "<group>"; };
 		B4B0EC1D23C78B6B0057D230 /* SeriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesModel.swift; sourceTree = "<group>"; };
+		B4B0EC2123C791980057D230 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B4B0EC2323C7962C0057D230 /* Marvel_MVP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Marvel_MVP.entitlements; sourceTree = "<group>"; };
+		B4B0EC2423C799460057D230 /* SignInWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithApple.swift; sourceTree = "<group>"; };
+		B4B0EC2623C7A3C30057D230 /* UserAndPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAndPassword.swift; sourceTree = "<group>"; };
+		B4B0EC2923C7A71C0057D230 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		B4B0EC2A23C7A71C0057D230 /* UserDataKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataKeychain.swift; sourceTree = "<group>"; };
+		B4B0EC2B23C7A71C0057D230 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		B4B0EC2C23C7A71C0057D230 /* SharedWebCredential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedWebCredential.swift; sourceTree = "<group>"; };
+		B4B0EC3123C7A8B10057D230 /* SignInWithAppleDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleDelegates.swift; sourceTree = "<group>"; };
+		B4B0EC3323C7AA200057D230 /* WebApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApi.swift; sourceTree = "<group>"; };
 		FD459BC9B89FCDDC6AA4E1C8 /* Pods-Marvel_MVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel_MVP.debug.xcconfig"; path = "Target Support Files/Pods-Marvel_MVP/Pods-Marvel_MVP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +125,7 @@
 		B4B0EBE723C639B90057D230 /* Marvel_MVP */ = {
 			isa = PBXGroup;
 			children = (
+				B4B0EC2323C7962C0057D230 /* Marvel_MVP.entitlements */,
 				B4B0EC1423C6405C0057D230 /* COMPONENTES */,
 				B4B0EC0F23C63CA40057D230 /* UTILS_HELPERS */,
 				B4B0EC0C23C63C330057D230 /* MODELS */,
@@ -132,9 +152,8 @@
 		B4B0EBFE23C639D30057D230 /* SECTIONS_FLOWS */ = {
 			isa = PBXGroup;
 			children = (
-				B4B0EBFF23C639F80057D230 /* LoginView.swift */,
-				B4B0EC0423C63B460057D230 /* LoginPresenter.swift */,
-				B4B0EC0A23C63B930057D230 /* LoginInteractor.swift */,
+				B4B0EC2023C7913E0057D230 /* LOGIN */,
+				B4B0EC1F23C791210057D230 /* HOME */,
 			);
 			path = SECTIONS_FLOWS;
 			sourceTree = "<group>";
@@ -142,6 +161,7 @@
 		B4B0EC0123C639FF0057D230 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				B4B0EC2823C7A71C0057D230 /* CredentialStorage */,
 				B4B0EC0223C63AC10057D230 /* AppAssembly.swift */,
 				B4B0EC0623C63B680057D230 /* BaseProvider.swift */,
 				B4B0EC0723C63B680057D230 /* GenerProvider.swift */,
@@ -174,8 +194,41 @@
 			children = (
 				B4B0EC1523C640820057D230 /* CustomCellMovie.swift */,
 				B4B0EC1923C66FE50057D230 /* HeaderCellComics.swift */,
+				B4B0EC2423C799460057D230 /* SignInWithApple.swift */,
+				B4B0EC2623C7A3C30057D230 /* UserAndPassword.swift */,
+				B4B0EC3123C7A8B10057D230 /* SignInWithAppleDelegates.swift */,
 			);
 			path = COMPONENTES;
+			sourceTree = "<group>";
+		};
+		B4B0EC1F23C791210057D230 /* HOME */ = {
+			isa = PBXGroup;
+			children = (
+				B4B0EBFF23C639F80057D230 /* HomeView.swift */,
+				B4B0EC0423C63B460057D230 /* HomePresenter.swift */,
+				B4B0EC0A23C63B930057D230 /* HomeInteractor.swift */,
+			);
+			path = HOME;
+			sourceTree = "<group>";
+		};
+		B4B0EC2023C7913E0057D230 /* LOGIN */ = {
+			isa = PBXGroup;
+			children = (
+				B4B0EC2123C791980057D230 /* LoginView.swift */,
+			);
+			path = LOGIN;
+			sourceTree = "<group>";
+		};
+		B4B0EC2823C7A71C0057D230 /* CredentialStorage */ = {
+			isa = PBXGroup;
+			children = (
+				B4B0EC3323C7AA200057D230 /* WebApi.swift */,
+				B4B0EC2923C7A71C0057D230 /* UserData.swift */,
+				B4B0EC2A23C7A71C0057D230 /* UserDataKeychain.swift */,
+				B4B0EC2B23C7A71C0057D230 /* Keychain.swift */,
+				B4B0EC2C23C7A71C0057D230 /* SharedWebCredential.swift */,
+			);
+			path = CredentialStorage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,21 +346,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4B0EC0023C639F80057D230 /* LoginView.swift in Sources */,
+				B4B0EC3023C7A71D0057D230 /* SharedWebCredential.swift in Sources */,
+				B4B0EC0023C639F80057D230 /* HomeView.swift in Sources */,
 				B4B0EC0323C63AC10057D230 /* AppAssembly.swift in Sources */,
 				B4B0EBE923C639B90057D230 /* AppDelegate.swift in Sources */,
 				B4B0EC1C23C73A190057D230 /* CharactersModel.swift in Sources */,
+				B4B0EC3223C7A8B10057D230 /* SignInWithAppleDelegates.swift in Sources */,
 				B4B0EC1623C640820057D230 /* CustomCellMovie.swift in Sources */,
+				B4B0EC2F23C7A71D0057D230 /* Keychain.swift in Sources */,
 				B4B0EC0E23C63C640057D230 /* ComicsModel.swift in Sources */,
 				B4B0EC1323C63E2F0057D230 /* Helpers.swift in Sources */,
 				B4B0EBEB23C639B90057D230 /* SceneDelegate.swift in Sources */,
 				B4B0EC1E23C78B6B0057D230 /* SeriesModel.swift in Sources */,
 				B4B0EC1123C63CB10057D230 /* Constantes.swift in Sources */,
-				B4B0EC0B23C63B930057D230 /* LoginInteractor.swift in Sources */,
+				B4B0EC2E23C7A71D0057D230 /* UserDataKeychain.swift in Sources */,
+				B4B0EC2723C7A3C30057D230 /* UserAndPassword.swift in Sources */,
+				B4B0EC2223C791980057D230 /* LoginView.swift in Sources */,
+				B4B0EC0B23C63B930057D230 /* HomeInteractor.swift in Sources */,
+				B4B0EC3423C7AA200057D230 /* WebApi.swift in Sources */,
 				B4B0EC0923C63B680057D230 /* GenerProvider.swift in Sources */,
 				B4B0EC1A23C66FE50057D230 /* HeaderCellComics.swift in Sources */,
-				B4B0EC0523C63B460057D230 /* LoginPresenter.swift in Sources */,
+				B4B0EC0523C63B460057D230 /* HomePresenter.swift in Sources */,
 				B4B0EC0823C63B680057D230 /* BaseProvider.swift in Sources */,
+				B4B0EC2523C799460057D230 /* SignInWithApple.swift in Sources */,
+				B4B0EC2D23C7A71D0057D230 /* UserData.swift in Sources */,
 				B4B0EC1823C640B50057D230 /* RemoteImageUrl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,7 +507,9 @@
 			baseConfigurationReference = FD459BC9B89FCDDC6AA4E1C8 /* Pods-Marvel_MVP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = Marvel_MVP/Marvel_MVP.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"Marvel_MVP/Preview Content\"";
 				DEVELOPMENT_TEAM = 2C7W4RF846;
 				ENABLE_PREVIEWS = YES;
@@ -454,8 +518,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icologic.iOS.Marvel-MVP";
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iOS.Marvel.MVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = MARVELPRO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -466,7 +531,9 @@
 			baseConfigurationReference = 7E3833793C8CF09F95E5CFDC /* Pods-Marvel_MVP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = Marvel_MVP/Marvel_MVP.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"Marvel_MVP/Preview Content\"";
 				DEVELOPMENT_TEAM = 2C7W4RF846;
 				ENABLE_PREVIEWS = YES;
@@ -475,8 +542,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icologic.iOS.Marvel-MVP";
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iOS.Marvel.MVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = MARVELPRO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
