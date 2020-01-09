@@ -22,9 +22,13 @@ struct LoginView: View {
     
     var body: some View {
         NavigationView{
-            List(presenter.comics){ comic in
-                CustomCellMovie(comic: comic).frame(height: 300)
-            }.navigationBarTitle(Text("Comics"), displayMode: .large)
+            List{
+                FeaturedComics().scaledToFill().frame(height:250).clipped().listRowInsets(EdgeInsets())
+                ComicsCellMovie(arrayComics: self.presenter.comics, categoryName: "Comics").listRowInsets(EdgeInsets())
+                CharactersCellMovie(arrayCharacters: self.presenter.characters, categoryName: "Characters").listRowInsets(EdgeInsets())
+                SeriesCellMovie(arraySeries: self.presenter.series, categoryName: "Series").listRowInsets(EdgeInsets())
+            }.navigationBarTitle(Text("MARVEL"))
+            
         }
     }
 }

@@ -35,4 +35,52 @@ class GenericProvider: BaseProvider {
             }.cancel()
     }
     
+    //MARK: - Characters
+    internal func getListCharactersFromMarvel(_ endPoint : String,
+                                          timestamp : String,
+                                          apiKey : String,
+                                          hash : String,
+                                          success: @escaping(CharactersModel) -> (),
+                                          failure: @escaping(APIError) -> ()){
+        
+        let urlArguments : [CVarArg] = [endPoint, timestamp, apiKey, hash]
+        let lastUrlEndPoint = String(format: CONSTANTS.CALLSTOMARVEL.BASE_URL, arguments: urlArguments)
+        
+        requestGeneric(CharactersModel.self, endpoint: lastUrlEndPoint, method: .get)
+            .sink(receiveCompletion: { (completion) in
+                switch completion {
+                    case .finished:
+                        break
+                    case .failure(let error):
+                        failure(error)
+                }
+            }) { (data) in
+                success(data)
+            }.cancel()
+    }
+    
+    //MARK: - Characters
+    internal func getListSeriesFromMarvel(_ endPoint : String,
+                                          timestamp : String,
+                                          apiKey : String,
+                                          hash : String,
+                                          success: @escaping(SeriesModel) -> (),
+                                          failure: @escaping(APIError) -> ()){
+        
+        let urlArguments : [CVarArg] = [endPoint, timestamp, apiKey, hash]
+        let lastUrlEndPoint = String(format: CONSTANTS.CALLSTOMARVEL.BASE_URL, arguments: urlArguments)
+        
+        requestGeneric(SeriesModel.self, endpoint: lastUrlEndPoint, method: .get)
+            .sink(receiveCompletion: { (completion) in
+                switch completion {
+                    case .finished:
+                        break
+                    case .failure(let error):
+                        failure(error)
+                }
+            }) { (data) in
+                success(data)
+            }.cancel()
+    }
+    
 }

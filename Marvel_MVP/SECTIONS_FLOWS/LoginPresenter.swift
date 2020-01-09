@@ -11,11 +11,21 @@ import Foundation
 class LoginPresenter : LoginInteractor, ObservableObject  {
     
     @Published var comics : [ResultComics] = []
+    @Published var characters : [ResultCharacters] = []
+    @Published var series : [ResultSeries] = []
+    
     
     internal func getDataFromInteractor(){
         getAllComicsFromGenericProvider { (comicsEntity) in
             self.comics = comicsEntity
         }
+        getAllCharactersFromGenericProvider { (storiesEntity) in
+            self.characters = storiesEntity
+        }
+        getAllSeriesFromGenericProvider { (seriesEntity) in
+            self.series = seriesEntity
+        }
     }
+    
 
 }

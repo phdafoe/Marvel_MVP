@@ -24,6 +24,9 @@
 		B4B0EC1323C63E2F0057D230 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC1223C63E2F0057D230 /* Helpers.swift */; };
 		B4B0EC1623C640820057D230 /* CustomCellMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC1523C640820057D230 /* CustomCellMovie.swift */; };
 		B4B0EC1823C640B50057D230 /* RemoteImageUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC1723C640B50057D230 /* RemoteImageUrl.swift */; };
+		B4B0EC1A23C66FE50057D230 /* HeaderCellComics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC1923C66FE50057D230 /* HeaderCellComics.swift */; };
+		B4B0EC1C23C73A190057D230 /* CharactersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC1B23C73A190057D230 /* CharactersModel.swift */; };
+		B4B0EC1E23C78B6B0057D230 /* SeriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC1D23C78B6B0057D230 /* SeriesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,9 @@
 		B4B0EC1223C63E2F0057D230 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		B4B0EC1523C640820057D230 /* CustomCellMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellMovie.swift; sourceTree = "<group>"; };
 		B4B0EC1723C640B50057D230 /* RemoteImageUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImageUrl.swift; sourceTree = "<group>"; };
+		B4B0EC1923C66FE50057D230 /* HeaderCellComics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCellComics.swift; sourceTree = "<group>"; };
+		B4B0EC1B23C73A190057D230 /* CharactersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersModel.swift; sourceTree = "<group>"; };
+		B4B0EC1D23C78B6B0057D230 /* SeriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesModel.swift; sourceTree = "<group>"; };
 		FD459BC9B89FCDDC6AA4E1C8 /* Pods-Marvel_MVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel_MVP.debug.xcconfig"; path = "Target Support Files/Pods-Marvel_MVP/Pods-Marvel_MVP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				B4B0EC0D23C63C640057D230 /* ComicsModel.swift */,
+				B4B0EC1B23C73A190057D230 /* CharactersModel.swift */,
+				B4B0EC1D23C78B6B0057D230 /* SeriesModel.swift */,
 			);
 			path = MODELS;
 			sourceTree = "<group>";
@@ -165,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				B4B0EC1523C640820057D230 /* CustomCellMovie.swift */,
+				B4B0EC1923C66FE50057D230 /* HeaderCellComics.swift */,
 			);
 			path = COMPONENTES;
 			sourceTree = "<group>";
@@ -287,13 +296,16 @@
 				B4B0EC0023C639F80057D230 /* LoginView.swift in Sources */,
 				B4B0EC0323C63AC10057D230 /* AppAssembly.swift in Sources */,
 				B4B0EBE923C639B90057D230 /* AppDelegate.swift in Sources */,
+				B4B0EC1C23C73A190057D230 /* CharactersModel.swift in Sources */,
 				B4B0EC1623C640820057D230 /* CustomCellMovie.swift in Sources */,
 				B4B0EC0E23C63C640057D230 /* ComicsModel.swift in Sources */,
 				B4B0EC1323C63E2F0057D230 /* Helpers.swift in Sources */,
 				B4B0EBEB23C639B90057D230 /* SceneDelegate.swift in Sources */,
+				B4B0EC1E23C78B6B0057D230 /* SeriesModel.swift in Sources */,
 				B4B0EC1123C63CB10057D230 /* Constantes.swift in Sources */,
 				B4B0EC0B23C63B930057D230 /* LoginInteractor.swift in Sources */,
 				B4B0EC0923C63B680057D230 /* GenerProvider.swift in Sources */,
+				B4B0EC1A23C66FE50057D230 /* HeaderCellComics.swift in Sources */,
 				B4B0EC0523C63B460057D230 /* LoginPresenter.swift in Sources */,
 				B4B0EC0823C63B680057D230 /* BaseProvider.swift in Sources */,
 				B4B0EC1823C640B50057D230 /* RemoteImageUrl.swift in Sources */,

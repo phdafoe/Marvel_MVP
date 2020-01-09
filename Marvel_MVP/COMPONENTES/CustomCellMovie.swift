@@ -8,13 +8,85 @@
 
 import SwiftUI
 
-struct CustomCellMovie: View {
+struct ComicsCellMovie: View {
+    
+    var arrayComics : [ResultComics]
+    var categoryName : String
+        
+    init(arrayComics : [ResultComics], categoryName: String) {
+        self.arrayComics = arrayComics
+        self.categoryName = categoryName
+    }
+ 
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(self.categoryName).font(.headline).padding(.leading, 15).padding(.top, 5)
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(alignment: .top, spacing: 0) {
+                    ForEach(self.arrayComics) { comic in
+                        ComicCell(comic: comic)
+                    }
+                }
+            }.frame(height: 300)
+        }
+    }
+}
+
+struct CharactersCellMovie: View {
+    
+    var arrayCharacters : [ResultCharacters]
+    var categoryName : String
+        
+    init(arrayCharacters: [ResultCharacters], categoryName: String) {
+        self.arrayCharacters = arrayCharacters
+        self.categoryName = categoryName
+    }
+ 
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(self.categoryName).font(.headline).padding(.leading, 15).padding(.top, 5)
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(alignment: .top, spacing: 0) {
+                    ForEach(self.arrayCharacters) { character in
+                        CharacterCell(character: character)
+                    }
+                }
+            }.frame(height: 300)
+        }
+    }
+}
+
+struct SeriesCellMovie: View {
+    
+    var arraySeries : [ResultSeries]
+    var categoryName : String
+        
+    init(arraySeries: [ResultSeries], categoryName: String) {
+        self.arraySeries = arraySeries
+        self.categoryName = categoryName
+    }
+ 
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(self.categoryName).font(.headline).padding(.leading, 15).padding(.top, 5)
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(alignment: .top, spacing: 0) {
+                    ForEach(self.arraySeries) { serie in
+                        SeriesCell(serie: serie)
+                    }
+                }
+            }.frame(height: 300)
+        }
+    }
+}
+
+
+struct ComicCell: View {
     
     var comic: ResultComics
-    
+       
     @ObservedObject var remoteImage = RemoteImageUrl()
-    //@ObservedObject var remote = RemoteImageUrl2()
-    
+       
     init(comic: ResultComics) {
         self.comic = comic
         self.remoteImage.getImageFromUrl(self.getPathImage(comic))
@@ -41,23 +113,72 @@ struct CustomCellMovie: View {
     }
     
     var body: some View {
-        return GeometryReader { geometry in
-            HStack(alignment: .top) {
-                Image(uiImage: ((self.remoteImage.data.isEmpty) ? UIImage(named: "placeholder") : UIImage(data: self.remoteImage.data))!)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 180, height: 270)
-                    .clipShape(Rectangle())
-                    .overlay(Rectangle().stroke(Color.white, lineWidth: 3))
-                    .shadow(radius: 15)
-                VStack(alignment: .leading) {
-                    Text("Artist: \(self.getName(self.comic))")
-                    Text("Name: \(self.comic.series?.name ?? "")")
-                    Text("Type: \(self.comic.format ?? "")")
-                }.font(.headline)
-            }.frame(width: geometry.size.width, height: geometry.size.height)
-        }
+        VStack(alignment: .leading) {
+            Image(uiImage: ((self.remoteImage.data.isEmpty) ? UIImage(named: "placeholder") : UIImage(data: self.remoteImage.data))!)
+                .renderingMode(.original)
+                .resizable()
+                .frame(width: 180, height: 270)
+                .cornerRadius(5)
+                .aspectRatio(contentMode: .fit)
+            Text("\(self.getName(self.comic))")
+                .foregroundColor(.primary)
+                .font(.caption)
+        }.padding(.leading, 15)
     }
 }
 
+
+struct CharacterCell: View {
+    
+    var character: ResultCharacters
+       
+    @ObservedObject var remoteImage = RemoteImageUrl()
+       
+    init(character: ResultCharacters) {
+        self.character = character
+        self.remoteImage.getImageFromUrl((self.character.thumbnail?.path)!+".jpg")
+    }
+    
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Image(uiImage: ((self.remoteImage.data.isEmpty) ? UIImage(named: "placeholder") : UIImage(data: self.remoteImage.data))!)
+                .renderingMode(.original)
+                .resizable()
+                .frame(width: 180, height: 270)
+                .cornerRadius(5)
+                .aspectRatio(contentMode: .fit)
+            Text("\(self.character.name!)")
+                .foregroundColor(.primary)
+                .font(.caption)
+        }.padding(.leading, 15)
+    }
+}
+
+struct SeriesCell: View {
+    
+    var serie: ResultSeries
+       
+    @ObservedObject var remoteImage = RemoteImageUrl()
+       
+    init(serie: ResultSeries) {
+        self.serie = serie
+        self.remoteImage.getImageFromUrl((self.serie.thumbnail?.path)!+".jpg")
+    }
+    
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Image(uiImage: ((self.remoteImage.data.isEmpty) ? UIImage(named: "placeholder") : UIImage(data: self.remoteImage.data))!)
+                .renderingMode(.original)
+                .resizable()
+                .frame(width: 180, height: 270)
+                .cornerRadius(5)
+                .aspectRatio(contentMode: .fit)
+            Text("\(self.serie.title!)")
+                .foregroundColor(.primary)
+                .font(.caption)
+        }.padding(.leading, 15)
+    }
+}
 

@@ -23,4 +23,32 @@ class LoginInteractor : GenericProvider  {
             print(error.errorDescription!)
         }
     }
+    
+    internal func getAllCharactersFromGenericProvider(_ completion : @escaping ([ResultCharacters]) -> ()) {
+        getListCharactersFromMarvel(CONSTANTS.CALLSTOMARVEL.BASE_URL_CHARACTERS,
+                                timestamp: Helpers().dimeTimeStamp(),
+                                apiKey: CONSTANTS.API_KEY.PUBLIC,
+                                hash: Helpers().getHash(),
+                                success: { (resultCharacters) in
+                                    if let resultDes = resultCharacters.data?.results{
+                                        completion(resultDes)
+                                    }
+        }) { (error) in
+            print(error.errorDescription!)
+        }
+    }
+    
+    internal func getAllSeriesFromGenericProvider(_ completion : @escaping ([ResultSeries]) -> ()) {
+        getListSeriesFromMarvel(CONSTANTS.CALLSTOMARVEL.BASE_URL_SERIES,
+                                timestamp: Helpers().dimeTimeStamp(),
+                                apiKey: CONSTANTS.API_KEY.PUBLIC,
+                                hash: Helpers().getHash(),
+                                success: { (resultCharacters) in
+                                    if let resultDes = resultCharacters.data?.results{
+                                        completion(resultDes)
+                                    }
+        }) { (error) in
+            print(error.errorDescription!)
+        }
+    }
 }
