@@ -13,16 +13,20 @@ class HomePresenter : HomeInteractor, ObservableObject  {
     @Published var comics : [ResultComics] = []
     @Published var characters : [ResultCharacters] = []
     @Published var series : [ResultSeries] = []
+    @Published var featured : [ResultFeatured] = []
     
     
     internal func getDataFromInteractor(){
-        getAllComicsFromGenericProvider { (comicsEntity) in
+        getAllFeaturedGenericProvider { (featuredEntity) in
+            self.featured = featuredEntity
+        }
+        getAllComicsFromGenericProvider(5) { (comicsEntity) in
             self.comics = comicsEntity
         }
-        getAllCharactersFromGenericProvider { (storiesEntity) in
+        getAllCharactersFromGenericProvider(5) { (storiesEntity) in
             self.characters = storiesEntity
         }
-        getAllSeriesFromGenericProvider { (seriesEntity) in
+        getAllSeriesFromGenericProvider(5) { (seriesEntity) in
             self.series = seriesEntity
         }
     }

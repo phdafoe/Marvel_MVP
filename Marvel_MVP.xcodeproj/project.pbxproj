@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B427A40B1689350B7684D94D /* Pods_Marvel_MVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05179F54814566DCB9257966 /* Pods_Marvel_MVP.framework */; };
+		B487801523C8B07200E57D2D /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B487801423C8B07200E57D2D /* ProfileButton.swift */; };
+		B487801823C8FE9E00E57D2D /* AllListMarvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B487801723C8FE9E00E57D2D /* AllListMarvel.swift */; };
+		B487801A23C8FF2A00E57D2D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B487801923C8FF2A00E57D2D /* PostCell.swift */; };
+		B487801C23C908D100E57D2D /* AllListMarvelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B487801B23C908D100E57D2D /* AllListMarvelPresenter.swift */; };
 		B4B0EBE923C639B90057D230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EBE823C639B90057D230 /* AppDelegate.swift */; };
 		B4B0EBEB23C639B90057D230 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EBEA23C639B90057D230 /* SceneDelegate.swift */; };
 		B4B0EBF123C639BC0057D230 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B0EBF023C639BC0057D230 /* Assets.xcassets */; };
@@ -36,11 +40,16 @@
 		B4B0EC3023C7A71D0057D230 /* SharedWebCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC2C23C7A71C0057D230 /* SharedWebCredential.swift */; };
 		B4B0EC3223C7A8B10057D230 /* SignInWithAppleDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC3123C7A8B10057D230 /* SignInWithAppleDelegates.swift */; };
 		B4B0EC3423C7AA200057D230 /* WebApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC3323C7AA200057D230 /* WebApi.swift */; };
+		B4B0EC3923C7C9AA0057D230 /* FeaturedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0EC3823C7C9AA0057D230 /* FeaturedModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05179F54814566DCB9257966 /* Pods_Marvel_MVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marvel_MVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E3833793C8CF09F95E5CFDC /* Pods-Marvel_MVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel_MVP.release.xcconfig"; path = "Target Support Files/Pods-Marvel_MVP/Pods-Marvel_MVP.release.xcconfig"; sourceTree = "<group>"; };
+		B487801423C8B07200E57D2D /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButton.swift; sourceTree = "<group>"; };
+		B487801723C8FE9E00E57D2D /* AllListMarvel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListMarvel.swift; sourceTree = "<group>"; };
+		B487801923C8FF2A00E57D2D /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		B487801B23C908D100E57D2D /* AllListMarvelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListMarvelPresenter.swift; sourceTree = "<group>"; };
 		B4B0EBE523C639B90057D230 /* Marvel_MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marvel_MVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B0EBE823C639B90057D230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4B0EBEA23C639B90057D230 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +81,7 @@
 		B4B0EC2C23C7A71C0057D230 /* SharedWebCredential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedWebCredential.swift; sourceTree = "<group>"; };
 		B4B0EC3123C7A8B10057D230 /* SignInWithAppleDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleDelegates.swift; sourceTree = "<group>"; };
 		B4B0EC3323C7AA200057D230 /* WebApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApi.swift; sourceTree = "<group>"; };
+		B4B0EC3823C7C9AA0057D230 /* FeaturedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedModel.swift; sourceTree = "<group>"; };
 		FD459BC9B89FCDDC6AA4E1C8 /* Pods-Marvel_MVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel_MVP.debug.xcconfig"; path = "Target Support Files/Pods-Marvel_MVP/Pods-Marvel_MVP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +112,15 @@
 				7E3833793C8CF09F95E5CFDC /* Pods-Marvel_MVP.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B487801623C8FE7600E57D2D /* LIST_MARVEL */ = {
+			isa = PBXGroup;
+			children = (
+				B487801723C8FE9E00E57D2D /* AllListMarvel.swift */,
+				B487801B23C908D100E57D2D /* AllListMarvelPresenter.swift */,
+			);
+			path = LIST_MARVEL;
 			sourceTree = "<group>";
 		};
 		B4B0EBDC23C639B90057D230 = {
@@ -152,6 +171,7 @@
 		B4B0EBFE23C639D30057D230 /* SECTIONS_FLOWS */ = {
 			isa = PBXGroup;
 			children = (
+				B487801623C8FE7600E57D2D /* LIST_MARVEL */,
 				B4B0EC2023C7913E0057D230 /* LOGIN */,
 				B4B0EC1F23C791210057D230 /* HOME */,
 			);
@@ -175,6 +195,7 @@
 				B4B0EC0D23C63C640057D230 /* ComicsModel.swift */,
 				B4B0EC1B23C73A190057D230 /* CharactersModel.swift */,
 				B4B0EC1D23C78B6B0057D230 /* SeriesModel.swift */,
+				B4B0EC3823C7C9AA0057D230 /* FeaturedModel.swift */,
 			);
 			path = MODELS;
 			sourceTree = "<group>";
@@ -192,11 +213,8 @@
 		B4B0EC1423C6405C0057D230 /* COMPONENTES */ = {
 			isa = PBXGroup;
 			children = (
-				B4B0EC1523C640820057D230 /* CustomCellMovie.swift */,
-				B4B0EC1923C66FE50057D230 /* HeaderCellComics.swift */,
-				B4B0EC2423C799460057D230 /* SignInWithApple.swift */,
-				B4B0EC2623C7A3C30057D230 /* UserAndPassword.swift */,
-				B4B0EC3123C7A8B10057D230 /* SignInWithAppleDelegates.swift */,
+				B4B0EC3723C7C9330057D230 /* Home */,
+				B4B0EC3623C7C9290057D230 /* Login */,
 			);
 			path = COMPONENTES;
 			sourceTree = "<group>";
@@ -229,6 +247,27 @@
 				B4B0EC2C23C7A71C0057D230 /* SharedWebCredential.swift */,
 			);
 			path = CredentialStorage;
+			sourceTree = "<group>";
+		};
+		B4B0EC3623C7C9290057D230 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B4B0EC2423C799460057D230 /* SignInWithApple.swift */,
+				B4B0EC2623C7A3C30057D230 /* UserAndPassword.swift */,
+				B4B0EC3123C7A8B10057D230 /* SignInWithAppleDelegates.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B4B0EC3723C7C9330057D230 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B4B0EC1523C640820057D230 /* CustomCellMovie.swift */,
+				B4B0EC1923C66FE50057D230 /* HeaderCellComics.swift */,
+				B487801423C8B07200E57D2D /* ProfileButton.swift */,
+				B487801923C8FF2A00E57D2D /* PostCell.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +394,8 @@
 				B4B0EC1623C640820057D230 /* CustomCellMovie.swift in Sources */,
 				B4B0EC2F23C7A71D0057D230 /* Keychain.swift in Sources */,
 				B4B0EC0E23C63C640057D230 /* ComicsModel.swift in Sources */,
+				B487801C23C908D100E57D2D /* AllListMarvelPresenter.swift in Sources */,
+				B4B0EC3923C7C9AA0057D230 /* FeaturedModel.swift in Sources */,
 				B4B0EC1323C63E2F0057D230 /* Helpers.swift in Sources */,
 				B4B0EBEB23C639B90057D230 /* SceneDelegate.swift in Sources */,
 				B4B0EC1E23C78B6B0057D230 /* SeriesModel.swift in Sources */,
@@ -365,11 +406,14 @@
 				B4B0EC0B23C63B930057D230 /* HomeInteractor.swift in Sources */,
 				B4B0EC3423C7AA200057D230 /* WebApi.swift in Sources */,
 				B4B0EC0923C63B680057D230 /* GenerProvider.swift in Sources */,
+				B487801A23C8FF2A00E57D2D /* PostCell.swift in Sources */,
 				B4B0EC1A23C66FE50057D230 /* HeaderCellComics.swift in Sources */,
+				B487801523C8B07200E57D2D /* ProfileButton.swift in Sources */,
 				B4B0EC0523C63B460057D230 /* HomePresenter.swift in Sources */,
 				B4B0EC0823C63B680057D230 /* BaseProvider.swift in Sources */,
 				B4B0EC2523C799460057D230 /* SignInWithApple.swift in Sources */,
 				B4B0EC2D23C7A71D0057D230 /* UserData.swift in Sources */,
+				B487801823C8FE9E00E57D2D /* AllListMarvel.swift in Sources */,
 				B4B0EC1823C640B50057D230 /* RemoteImageUrl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

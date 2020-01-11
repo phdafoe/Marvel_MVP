@@ -16,11 +16,12 @@ struct Constants {
 }
 
 struct CallsToMarvel {
-    let BASE_URL = "http://gateway.marvel.com/v1/public/%@?ts=%@&apikey=%@&hash=%@"
+    let BASE_URL = "http://gateway.marvel.com/v1/public/%@?&limit=%@&ts=%@&apikey=%@&hash=%@"
     let BASE_URL_COMICS = "comics"
     let BASE_URL_STORIES = "stories"
     let BASE_URL_SERIES = "series"
     let BASE_URL_CHARACTERS = "characters"
+    let BASE_URL_FEATURED_MARVEL = "http://andresocampo.com/pruebas/marvel/featured/featuredMarvel.json"
 }
 
 struct ApiKey {

@@ -20,9 +20,10 @@ final class AppAssembly : AppAssemblyProtocol {
     public typealias HTTPHeaders = [String: String]
     
     internal func applicationShowInitVC(_ window : UIWindow, scene: UIScene) {
-        let actualViewController = LoginView()
+        let actualViewController = HomeView()
         window.rootViewController = UIHostingController(rootView: actualViewController)
         self.window = window
+        self.customUI()
         window.makeKeyAndVisible()
     }
     
@@ -32,6 +33,18 @@ final class AppAssembly : AppAssemblyProtocol {
             "Referer": referer
         ]
     }()
+    
+    private func customUI(){
+        /*let customView = UIView(frame: CGRect(x: 0, y: 0, width: (self.window?.bounds.width)!, height: 50))
+        customView.backgroundColor = UIColor.white
+        self.window?.addSubview(customView)*/
+        let customView = UIView(frame: CGRect(x: 50, y: 50, width: 100, height: 50))
+        customView.backgroundColor = UIColor.white
+        self.window?.addSubview(customView)
+       
+        
+        UINavigationBar.appearance().backgroundColor = .white
+    }
     
     
     

@@ -6,6 +6,7 @@
 //  Copyright © 2019 icologic. All rights reserved.
 //
 
+import Foundation
 import SwiftUI
 
 struct ComicsCellMovie: View {
@@ -113,17 +114,17 @@ struct ComicCell: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Image(uiImage: ((self.remoteImage.data.isEmpty) ? UIImage(named: "placeholder") : UIImage(data: self.remoteImage.data))!)
-                .renderingMode(.original)
-                .resizable()
-                .frame(width: 180, height: 270)
-                .cornerRadius(5)
-                .aspectRatio(contentMode: .fit)
-            Text("\(self.getName(self.comic))")
-                .foregroundColor(.primary)
-                .font(.caption)
-        }.padding(.leading, 15)
+            VStack(alignment: .leading) {
+                Image(uiImage: ((self.remoteImage.data.isEmpty) ? UIImage(named: "placeholder") : UIImage(data: self.remoteImage.data))!)
+                    .renderingMode(.original)
+                    .resizable()
+                    .frame(width: 180, height: 270)
+                    .cornerRadius(5)
+                    .aspectRatio(contentMode: .fit)
+                  Text("\(self.getName(self.comic))")
+                    .foregroundColor(.primary)
+                    .font(.caption)
+            }.padding(.leading, 15)
     }
 }
 

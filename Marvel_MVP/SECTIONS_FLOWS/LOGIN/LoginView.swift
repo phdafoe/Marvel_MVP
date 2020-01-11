@@ -12,27 +12,32 @@ import AuthenticationServices
 struct LoginView: View {
     
     @State var appleSignInDelegates: SignInWithAppleDelegates! = nil
+    @State var isLogin : Bool = false
     
     
     var body: some View {
-        VStack{
-            Image("logo")
-                .resizable()
-                .aspectRatio(contentMode: ContentMode.fit)
-                .frame(width: 150.0, height: 150.0)
-                .padding(Edge.Set.bottom, 20)
-                        
-            Text("Explore the world of MARVEL")
-                .font(.subheadline)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 70, trailing: 0))
-            
-            UserAndPassword().padding()
-            
-            SignInWithApple()
-                .frame(width: 280, height: 60)
-                .onTapGesture(perform: showAppleLogin)
-        }.onAppear {
-          self.performExistingAccountSetupFlows()
+        NavigationView{
+            VStack{
+                Image("logo")
+                    .resizable()
+                    .aspectRatio(contentMode: ContentMode.fit)
+                    .frame(width: 150.0, height: 150.0)
+                    .padding(Edge.Set.bottom, 20)
+                            
+                Text("Explore the world of MARVEL")
+                    .font(.subheadline)
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 70, trailing: 0))
+                
+                UserAndPassword().padding()
+                
+                SignInWithApple()
+                    .frame(width: 280, height: 60)
+                    .onTapGesture(perform: showAppleLogin)
+            }.onAppear {
+              self.performExistingAccountSetupFlows()
+            }.sheet(isPresented: $isLogin) {
+                HomeView()
+            }
         }
     }
     
@@ -46,6 +51,7 @@ struct LoginView: View {
     private func performSignIn(using requests: [ASAuthorizationRequest]) {
       appleSignInDelegates = SignInWithAppleDelegates() { success in
         if success {
+            self.isLogin = true
           // update UI
         } else {
           // show the user an error
@@ -54,7 +60,6 @@ struct LoginView: View {
 
       let controller = ASAuthorizationController(authorizationRequests: requests)
       controller.delegate = appleSignInDelegates
-
       controller.performRequests()
     }
     
@@ -77,8 +82,3 @@ struct LoginView: View {
     
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}

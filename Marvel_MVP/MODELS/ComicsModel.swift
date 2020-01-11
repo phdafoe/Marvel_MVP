@@ -53,7 +53,7 @@ struct ResultComics: Codable, Identifiable {
     let title: String?
     let issueNumber: Int?
     let variantDescription: String?
-    let resultDescription: String?
+    let description: String?
     let modified: String?
     let isbn: String?
     let upc: String?
@@ -84,7 +84,7 @@ struct ResultComics: Codable, Identifiable {
         case title
         case issueNumber
         case variantDescription
-        case resultDescription
+        case description
         case modified
         case isbn
         case upc
