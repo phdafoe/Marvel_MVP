@@ -1,0 +1,6 @@
+framework module Pods_Marvel_MVP {
+  umbrella header "Pods-Marvel_MVP-umbrella.h"
+
+  export *
+  module * { export * }
+}
