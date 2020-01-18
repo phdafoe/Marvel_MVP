@@ -8,6 +8,7 @@
 
 import Foundation
 import CryptoSwift
+import SwiftUI
 
 class Helpers{
     
@@ -23,5 +24,7 @@ class Helpers{
         let hash = (pTimeStamp+CONSTANTS.API_KEY.PRIVATE+CONSTANTS.API_KEY.PUBLIC).md5()
         return hash
     }
+    
+    
     
 }

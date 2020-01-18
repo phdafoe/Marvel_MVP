@@ -11,13 +11,18 @@ import SwiftUI
 struct PostCell: View {
     
     var arrayComics : [ResultComics]
+    var arrayCharacters : [ResultCharacters]
+    var arraySeries : [ResultSeries]
+    
+    var customArrayComics : [ResultComics] = []
         
-    init(arrayComics : [ResultComics]) {
-        self.arrayComics = arrayComics
+    init(arrayComics : [Any]) {
+        self.arrayComics = arrayComics as? [ResultComics] ?? []
+        self.arrayCharacters = arrayComics as? [ResultCharacters] ?? []
+        self.arraySeries = arrayComics as? [ResultSeries] ?? []
     }
     
     var body: some View {
-        
         VStack(alignment: .leading, spacing: 2){
             ForEach(self.arrayComics) { comic in
                 CustomPostCell(comic: comic)

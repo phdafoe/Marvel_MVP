@@ -11,18 +11,39 @@ import SwiftUI
 struct AllListMarvel: View {
     
     //MARK: - Variables locales
-    @ObservedObject var presenter = AllListMarvelPresenter()
     var categoryName : String = ""
+    var arrayComicsComplete : [ResultComics]
+    var arrayCharactersComplete : [ResultCharacters]
+    var arraySeriesComplete : [ResultSeries]
     
-    init(categoryName : String) {
+    init(categoryName : String, arrayComics : [Any]) {
         self.categoryName = categoryName
-        self.presenter.getDataFromHomeInteractor()
+        self.arrayComicsComplete = arrayComics as? [ResultComics] ?? []
+        self.arrayCharactersComplete = arrayComics as? [ResultCharacters] ?? []
+        self.arraySeriesComplete = arrayComics as? [ResultSeries] ?? []
+    }
+    
+    private func getArrayData() -> [Any]{
+        var aux : [Any] = []
+        switch self.categoryName {
+        case "Comics":
+            aux = self.arrayComicsComplete
+            return aux
+        case "Characters":
+            aux = self.arrayCharactersComplete
+            return aux
+        default:
+            aux = self.arraySeriesComplete
+            return aux
+        }
     }
     
     var body: some View {
         List{
-            PostCell(arrayComics: self.presenter.comics)
-        }
+            NavigationLink(destination: DetailMarvelView()){
+                PostCell(arrayComics: self.getArrayData())
+            }
+       }.navigationBarTitle(Text("Todo Items"))
     }
 }
 

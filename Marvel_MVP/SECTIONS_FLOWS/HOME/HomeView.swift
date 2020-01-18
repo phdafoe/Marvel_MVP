@@ -24,16 +24,16 @@ struct HomeView: View {
         NavigationView{
             List{
                 FeaturedComics(featured: self.presenter.featured).listRowInsets(EdgeInsets())
-                ComicsCellMovie(arrayComics: self.presenter.comics, categoryName: "Comics").listRowInsets(EdgeInsets())
-                NavigationLink(destination: AllListMarvel(categoryName : "Comics")) {
+                ComicsCellMovie(arrayComics: self.presenter.comicsArrayAux, categoryName: "Comics").listRowInsets(EdgeInsets())
+                NavigationLink(destination: AllListMarvel(categoryName : "Comics", arrayComics: self.presenter.comics)) {
                     Text("See All Comics")
                 }
-                CharactersCellMovie(arrayCharacters: self.presenter.characters, categoryName: "Characters").listRowInsets(EdgeInsets())
-                NavigationLink(destination: LoginView()) {
+                CharactersCellMovie(arrayCharacters: self.presenter.charactersArrayAux, categoryName: "Characters").listRowInsets(EdgeInsets())
+                NavigationLink(destination: AllListMarvel(categoryName : "Characters", arrayComics: self.presenter.characters)) {
                     Text("See All Characters")
                 }
-                SeriesCellMovie(arraySeries: self.presenter.series, categoryName: "Series").listRowInsets(EdgeInsets())
-                NavigationLink(destination: LoginView()) {
+                SeriesCellMovie(arraySeries: self.presenter.seriesArrayAux, categoryName: "Series").listRowInsets(EdgeInsets())
+                NavigationLink(destination: AllListMarvel(categoryName : "Series", arrayComics: self.presenter.series)) {
                     Text("See All Series")
                 }
             }
@@ -45,5 +45,7 @@ struct HomeView: View {
     
     
 }
+
+
 
 

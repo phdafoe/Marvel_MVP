@@ -28,6 +28,7 @@ struct FeaturedComics: View {
     }
 }
 
+
 struct FeaturedCell : View {
     
     var featured: ResultFeatured
@@ -44,3 +45,6 @@ struct FeaturedCell : View {
         }
     }
 }
+
+
+

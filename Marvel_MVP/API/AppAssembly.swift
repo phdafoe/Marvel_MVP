@@ -23,7 +23,7 @@ final class AppAssembly : AppAssemblyProtocol {
         let actualViewController = HomeView()
         window.rootViewController = UIHostingController(rootView: actualViewController)
         self.window = window
-        self.customUI()
+       // self.customUI()
         window.makeKeyAndVisible()
     }
     
@@ -35,15 +35,11 @@ final class AppAssembly : AppAssemblyProtocol {
     }()
     
     private func customUI(){
-        /*let customView = UIView(frame: CGRect(x: 0, y: 0, width: (self.window?.bounds.width)!, height: 50))
-        customView.backgroundColor = UIColor.white
-        self.window?.addSubview(customView)*/
-        let customView = UIView(frame: CGRect(x: 50, y: 50, width: 100, height: 50))
-        customView.backgroundColor = UIColor.white
+        let customView = UIView(frame: CGRect(x: 250, y: 250, width: 100, height: 50))
+        customView.backgroundColor = UIColor.red
         self.window?.addSubview(customView)
-       
-        
         UINavigationBar.appearance().backgroundColor = .white
+        UINavigationBar.appearance().alpha = 0.5
     }
     
     
